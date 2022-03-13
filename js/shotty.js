@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", () => {
+    let input = document.getElementById("maxValue");
+    input.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("start").click();
+        }
+    });
+});
+
 function start() {
     //create audio object here so it can buffer fast
     let snd = new Audio("audio/chime3.mp3"); // buffers automatically when created
